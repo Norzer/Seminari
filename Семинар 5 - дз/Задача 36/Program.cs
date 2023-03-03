@@ -7,10 +7,10 @@ int sum = 0;
 
 void FillArray(int[] array)
 {
-  for (int i = 1; i < n; i++)
+  for (int i = 0; i < n; i++)
   {
     array[i] = r.Next(100);
-    Console.WriteLine(array[i] + " ");
+    //Console.WriteLine(array[i] + " ");
   }
 }
 
