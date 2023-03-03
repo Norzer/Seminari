@@ -18,16 +18,10 @@ void SumChet( int[] array)
 {
     for (int i = 1; i < n; i++)
     {
-        if ( i % 2 != 0)
-        {
-           sum = sum + array[i];
-        }
-        else
-        {
-           continue;
-        };
+     sum = sum + array[i];
+     i++;
     }
- Console.WriteLine($"Сумма: ",sum);
+ Console.WriteLine(sum);
 }
 
 FillArray(array);
