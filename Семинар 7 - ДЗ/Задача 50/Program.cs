@@ -29,16 +29,17 @@ void PrintMatrix(int[,] matrix)
 }
 
 
-void Diapozon(int rows, int columns, int x, int y )
+void Diapozon(int[,] matrix, int x, int y)
 {
-    if ( y > rows && x > columns)
+    if (x > matrix.GetLength(0) || y > matrix.GetLength(1))
     {
         Console.WriteLine("такого элемента в массиве нет");
     }
     else
     {
-        Console.WriteLine("Такие элементы есть");
+        Console.WriteLine($"Значения введеных элементов в матрицы  =  {matrix[x - 1, y - 1]}");
     }
+
 }
 
 
@@ -51,7 +52,7 @@ int[,] matr = CreateMatrixRndInt(a, b, -100, 100);
 PrintMatrix(matr);
 
 Console.Write("Введите координату x = ");
-int x1 =  Convert.ToInt32(Console.ReadLine());
+int x1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите координату y = ");
-int y1 =  Convert.ToInt32(Console.ReadLine());
-Diapozon(a, b, x1, y1);
+int y1 = Convert.ToInt32(Console.ReadLine());
+Diapozon(matr, x1, y1);
