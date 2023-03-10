@@ -13,4 +13,14 @@ if (number.Length == 5)
 {
   CheckingNumber(number);
 }
-else Console.WriteLine($"Введенное число не 5-значное");
+else Console.WriteLine($"Введи правильное число");
+
+
+char[] str = s.ToCharArray();
+    string a;
+    for (int i = str.Length-1; i > -1; --i) 
+    {
+         a = Convert.ToString(str[i]);
+         Console.Write(a);
+    }
+      Console.ReadKey();
