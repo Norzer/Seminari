@@ -6,7 +6,17 @@ double razn = 0;
 double max = 0;
 double min = 1111111110;
 
-
+void Counter (int[] array, int count)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+       Console.WriteLine(array[i] + " ");
+       if (array[i] > 0)
+       {
+        count++;
+       }
+    }
+}
 
 
 void FillArray(double[] array)
