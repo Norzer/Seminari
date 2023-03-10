@@ -45,6 +45,7 @@ double Srednee(int[,] matrix, int rows)
 }
 
 
+
 Console.WriteLine("Размерность Матрицы: ");
 Console.Write("Введите количество строк = ");
 int a = Convert.ToInt32(Console.ReadLine());
