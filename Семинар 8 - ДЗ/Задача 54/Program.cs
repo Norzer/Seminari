@@ -42,7 +42,6 @@ void Poryadok(int[,] matrix, int temp)
                     matrix[j, i] = matrix[j, k];
                     matrix[j, k] = temp;
                 }
-
                 else
                 {
                     continue;
