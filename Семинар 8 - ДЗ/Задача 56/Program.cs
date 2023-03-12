@@ -22,27 +22,28 @@ int MinSumRows(int[,] matrix, int temp)
     {
         for (int j = 0; j < matrix.GetLength(1); j++) // columns
         {
-            for (int k = i; k < matrix.GetLength(0); k++)
-            {
-                s += matrix[j, k];
-                Console.WriteLine("------------" + s + "--------------------- ");
-            }
 
             do
             {
-                 if(min > s )
-                 {
-                   min = s;
-                   s = 0;
-                 }
-                 else
-                 {
-                   s = 0;
-                   break;
+                for (int k = i; k < matrix.GetLength(0); k++)
+                {
+                    s += matrix[j, k];
+                    Console.WriteLine("------------" + s + "--------------------- ");
+                }
+
+                if (min > s)
+                {
+                    min = s;
+                    s = 0;
+                }
+                else
+                {
+                    s = 0;
+                    break;
                 }
                 x++;
-            } while (x  < matrix.GetLength(0));
-        
+            } while (x < matrix.GetLength(1));
+
         }
     }
     return min;
