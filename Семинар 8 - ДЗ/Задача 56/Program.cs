@@ -17,17 +17,26 @@ int MinSumRows(int[,] matrix, int temp)
 {
     int min = 100000;
     int s = 0;
-    for (int i = 0; i < matrix.GetLength(0) - 1; i++) // rows
+    for (int i = 0; i < matrix.GetLength(1); i++) // rows
     {
-        for (int j = 0; j < matrix.GetLength(1); j++) // columns
+        for (int j = 0; j < matrix.GetLength(0); j++) // columns
         {
-            for (int k = i; k < matrix.GetLength(0); k++)
+            for (int k = 0; k < matrix.GetLength(1) ; k++)
             {
                 s += matrix[j, k];
             }
-            if ( min > s ) min = s;
-            else continue;
-            s = 0;
+            if ( min > s )
+            {
+                min = s;
+                s = 0;
+                continue;
+            }
+            else
+            {
+                s = 0;
+                continue;
+            }
+            
         }
     }
     return min;
