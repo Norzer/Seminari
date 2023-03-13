@@ -34,6 +34,15 @@ void PrintMatrix(int[,,] matrix)
     }
 }
 
+
+void Check(int rows, int columns, int depth)
+{
+    if  ( rows * columns * depth > 99)
+    {
+        Console.WriteLine("ОШИБКА - нарушает условие");
+    }
+}
+
 Console.WriteLine("Размерность Матриц : ");
 Console.Write("Введите количество строк = ");
 int a = Convert.ToInt32(Console.ReadLine());
@@ -42,5 +51,6 @@ int b = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите глубину = ");
 int c = Convert.ToInt32(Console.ReadLine());
 int[,,] matr = CreateMatrixRndInt(a, b, c, 10, 99);
+Check(a, b, c);
 PrintMatrix(matr);
 
