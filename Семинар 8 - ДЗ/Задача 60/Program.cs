@@ -1,7 +1,6 @@
-﻿int[,,] CreateMatrixRndInt(int rows, int columns, int depth, int min, int max)
+﻿int[,,] CreateMatrixRndInt(int rows, int columns, int depth)
 {
     int[,,] matrix = new int[rows, columns, depth]; // 0 , 1, 2
-    Random rnd = new Random();
     int x = 10;
 
     for (int i = 0; i < matrix.GetLength(0); i++) // rows
@@ -10,7 +9,7 @@
         {
             for (int k = 0; k < matrix.GetLength(2); k++)
             {
-                //matrix[i, j, k] = rnd.Next(min, max + 1);
+
                 matrix[i, j, k] = x;
                 x++;
             }
@@ -50,7 +49,7 @@ Console.Write("Введите количество столбцов = ");
 int b = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите глубину = ");
 int c = Convert.ToInt32(Console.ReadLine());
-int[,,] matr = CreateMatrixRndInt(a, b, c, 10, 99);
+int[,,] matr = CreateMatrixRndInt(a, b, c);
 Check(a, b, c);
 PrintMatrix(matr);
 
