@@ -8,9 +8,9 @@
     return array;
 }
 
-int Counter (int[] array)
+/*void Counter (int[] array, int count)
 {
-    int count = 0; 
+    //int count = 0; 
     for (int i = 0; i < array.Length; i++)
     {
        if (array[i] > 0)
@@ -19,21 +19,29 @@ int Counter (int[] array)
        }
     }
     //Console.WriteLine("------------"); 
-    return count;
+    //return count;
 }
 
 void PrintCounter (int k)
 {
     Console.WriteLine(k); 
-}
+}*/
 Console.WriteLine("Введите количество чисел, которые вы будуте вводить");
 int S = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("--------------------------------------------"); 
-//int K = 0;
+int count = 0;
 int[] arr = new int[S];
 CreateAndFillArray(S);
+for (int i = 0; i < arr.Length; i++)
+    {
+       if (arr[i] > 0)
+       {
+        count++;
+       }
+    }
 //int[] arr = new int[S];
-Console.WriteLine(Counter(arr));
-//PrintCounter (K);
+//Console.WriteLine(Counter(arr, K));
+Console.WriteLine(count);
+//PrintCounter(K);
 
 

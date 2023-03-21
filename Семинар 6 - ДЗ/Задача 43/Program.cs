@@ -1,4 +1,12 @@
-﻿Console.WriteLine("введите значение x1");
+﻿V Search(double x1, double x2, double y1, double y2)
+{
+    double x = (-x2 + x1)/(-y1 + y2);
+    double y = y2 * x + x2;
+
+}
+
+
+Console.WriteLine("введите значение x1");
 double x1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("введите число y1");
 double y1 = Convert.ToInt32(Console.ReadLine());
